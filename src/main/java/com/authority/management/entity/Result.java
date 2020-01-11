@@ -10,7 +10,7 @@ public class Result<T> {
 	
 	private String token;
 	
-	private T t;
+	private T data;
 
 	public int getCode() {
 		return code;
@@ -44,12 +44,12 @@ public class Result<T> {
 		this.token = token;
 	}
 
-	public T getT() {
-		return t;
+	public T getData() {
+		return data;
 	}
 
-	public void setT(T t) {
-		this.t = t;
+	public void setData(T data) {
+		this.data = data;
 	}
 
 

@@ -19,7 +19,7 @@ public class RightServiceImpl implements RightService{
 		result.setCode(CodeTagEnum.SUCCESS.getCode());
 		result.setMessage(CodeTagEnum.SUCCESS.getMessage());
 		result.setDesc("获取所有权限信息");
-		result.setT(rightMapper.queryRightInfoAll());
+		result.setData(rightMapper.queryRightInfoAll());
 		return result;
 	}
 

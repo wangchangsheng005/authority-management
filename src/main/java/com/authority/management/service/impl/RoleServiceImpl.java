@@ -20,7 +20,7 @@ public class RoleServiceImpl implements RoleService{
 		result.setCode(CodeTagEnum.SUCCESS.getCode());
 		result.setMessage(CodeTagEnum.SUCCESS.getMessage());
 		result.setDesc("获取所有角色信息");
-		result.setT(roleMapper.queryRoleInfoAll());
+		result.setData(roleMapper.queryRoleInfoAll());
 		return result;
 	}
 

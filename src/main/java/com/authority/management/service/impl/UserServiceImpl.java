@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService{
 		result.setCode(CodeTagEnum.SUCCESS.getCode());
 		result.setMessage(CodeTagEnum.SUCCESS.getMessage());
 		result.setDesc("获取所有用户信息");
-		result.setT(userMapper.queryUserInfoAll());
+		result.setData(userMapper.queryUserInfoAll());
 		return result;
 	}
 
@@ -71,7 +71,7 @@ public class UserServiceImpl implements UserService{
 		if(isFlag) {
 			result.setCode(CodeTagEnum.SUCCESS.getCode());
 			result.setMessage(CodeTagEnum.SUCCESS.getMessage());
-			result.setT(t);
+			result.setData(t);
 			result.setMessage("登录成功");
 		}else {
 			result.setCode(CodeTagEnum.ERROR.getCode());
@@ -128,6 +128,18 @@ public class UserServiceImpl implements UserService{
 			result.setMessage(CodeTagEnum.ERROR.getMessage());
 			result.setMessage("退出失败！！！");
 		}
+		return result;
+	}
+
+	@Override
+	public Result<Object> getUserInfo(long userId) {
+		Result<Object> result = new Result<Object>();
+		
+		result.setCode(CodeTagEnum.SUCCESS.getCode());
+		result.setMessage(CodeTagEnum.SUCCESS.getMessage());
+		result.setData(userMapper.selectByPrimaryKey(userId));
+		result.setMessage("退出成功！！！");
+		
 		return result;
 	}
 

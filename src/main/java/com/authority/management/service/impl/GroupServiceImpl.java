@@ -21,7 +21,7 @@ public class GroupServiceImpl implements GroupService{
 		result.setCode(CodeTagEnum.SUCCESS.getCode());
 		result.setMessage(CodeTagEnum.SUCCESS.getMessage());
 		result.setDesc("获取所有组信息");
-		result.setT(groupMapper.queryGroupInfoAll());
+		result.setData(groupMapper.queryGroupInfoAll());
 		return result;
 	}
 

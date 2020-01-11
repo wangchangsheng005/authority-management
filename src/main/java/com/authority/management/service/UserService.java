@@ -64,4 +64,14 @@ public interface UserService {
 	* @throws
 	 */
 	Result<Object> loginOut(String token);
+	/**
+	 * 
+	* @Title: getUserInfo 
+	* @Description: TODO 根据用户ID,查询用户的信息
+	* @param @param userId
+	* @param @return    设定文件 
+	* @return Result<Object>    返回类型 
+	* @throws
+	 */
+	Result<Object> getUserInfo(long userId);
 }
